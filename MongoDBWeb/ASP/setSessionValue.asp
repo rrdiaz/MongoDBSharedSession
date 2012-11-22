@@ -1,0 +1,3 @@
+﻿<%
+    Session("KeyFromASP")="ValueFromASP"
+     %>
