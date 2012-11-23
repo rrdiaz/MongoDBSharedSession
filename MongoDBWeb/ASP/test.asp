@@ -33,16 +33,18 @@
 	end if
 	
     'Set SharedSession Key from ASP
-    call sharedSession.Set("KeyFromASP","asp123")
-    'sharedSession["KeyFromASP"]="ValueFromASP"
+    'call sharedSession.Set("KeyFromASP","asp123")
+    sharedSession("KeyFromASP")="asp123"
     
-    'Get SharedSession Key from ASP.NET
+    'Get SharedSession Key from ASP.Net
     Response.write("<br>Key from .NET<br>")
-    Response.Write(sharedSession.Get("KeyFromASPNET"))
+    'Response.Write(sharedSession.Get("KeyFromASPNet"))
+    Response.Write(sharedSession("KeyFromASPNet"))
     
     'Get SharedSession Key from ASP
     Response.write("<br>Key from ASP<br>")
-    Response.Write(sharedSession.Get("KeyFromASP"))
+    'Response.Write(sharedSession.Get("KeyFromASP"))
+    Response.Write(sharedSession("KeyFromASP"))
     'End Session Start
         
     'Session End
@@ -61,6 +63,4 @@
 	call sharedSession.Dispose()
 	sharedSession = null
     'End Session End
-   
-
 %>

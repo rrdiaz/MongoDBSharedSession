@@ -17,6 +17,8 @@ namespace TestConsole
            //req.Set("nuevo1", "diego");
            
             var ss = session.Start("cookie_12345");
+            ss["testKey"] = "testValue";
+            Console.WriteLine(ss["testKey"]);
 
             //int idx=0;
             //foreach (var item in "A,B,C,D,E,F,G,H".Split(','))

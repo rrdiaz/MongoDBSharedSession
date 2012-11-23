@@ -143,6 +143,19 @@ namespace IOL.SharedSessionServer.COMWrapper
 			}
 		}
 
+        public string this[string key]
+        {
+            get
+            {
+                return this.Get(key);
+            }
+            set
+            {
+                this.Set(key, value);
+            }
+        } 
+
+
 		#region Support Methods
 		private SessionStateStoreData GetSessionData(string sessionId)
 		{
